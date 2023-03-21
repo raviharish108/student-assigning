@@ -16,7 +16,9 @@ const app=express();
   };
   
   
-
+app.get("/",(req,res)=>{
+  res.send("hello world")
+})
 app.use(express.json());
 app.use("/api/mentor",mentorroute)
 app.use("/api/student",studentroute)
