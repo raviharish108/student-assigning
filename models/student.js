@@ -12,7 +12,7 @@ const studentSchema = new mongoose.Schema(
       required: true,
       unique: true,
     },
-   
+  
     mentor: {
       type:String,
       default:"",
