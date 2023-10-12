@@ -17,7 +17,7 @@ export const create_student=async(req,res,next)=>{
     export const get_students=async(req,res)=>{
         try{
         const result=await student.find();
-        return res.status(200).send(result);
+        return res.status(200).json(result);
         }catch(err){
           return res.send({"msg":err.msg})
         }
