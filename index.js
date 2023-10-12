@@ -3,8 +3,11 @@ import mongoose from "mongoose";
 import * as dotenv from "dotenv";
 import mentorroute from "./routes/mentor.js"
 import studentroute from "./routes/student.js"
+import cors from "cors";
 dotenv.config();
 const app=express();
+
+app.use(cors())
  const connect = () => {
     mongoose.connect(process.env.mongo_url, {
     useNewUrlParser: true,
